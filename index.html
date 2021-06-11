@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .all{
+        width:100%;
+        height:2500px;
+        overflow:hidden;
+        border:1px solid white;
+    }
+    .banner{
+        width:100%;
+        height:50px;
+        background-color: black;
+        color:white;
+    }
+    .box{
+        display:flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width:100%;
+        /* margin-left:100px; */
+        height:50px;
+        background:black;
+        color:white;
+        align-items:center;
+    }
+    .box div:hover{
+        color:orange;
+    }
+    .background{
+        background:url(images/1.png);
+        background-position: -230px -22px; 
+    }
+    .music{
+        width:60%;
+        height:400px;
+        margin-left:0;
+        margin-top:90px;
+    }
+    .tittle{
+        margin-left:400px;
+        font-size:30px;
+    }
+    .introduce1{
+        margin-left:270px;
+        margin-top:30px;
+    }
+    .introduce2{
+        margin-left:295px;
+        margin-top:0;
+    }
+    .text{
+        color:orange;
+    }
+    .introduce3{
+        width:700px;
+        margin-top:40px;
+        margin-left:150px;
+        border-bottom: 1px solid rgb(165, 163, 163);
+    }
+    .lyric{
+        width:550px;
+        height:600px;
+        overflow: auto;
+        margin-left:295px;
+        margin-top:0;
+        word-break:normal;
+        padding-top:30px;
+        padding-left:20px;
+    }
+    .img{
+        margin-left:1000px;
+        margin-top:-400px;
+        width:340px;
+        height:340px;
+        background:url(images/5.jpg) no-repeat;
+        background-size: contain;
+        border-radius: 50%;
+        animation:animation1 5s linear infinite;
+    }
+    @keyframes animation1{
+        0%{
+            transform:rotate(0deg);
+        }
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+    #circle{
+        margin-top:-30px;
+        margin-left:-30px;
+    }
+    .playBtn{
+        width:40px;
+        height:40px;
+        background:url(images/7.jpg);
+        background-position:-207px 0px;
+        margin-top:0px;
+        margin-left:850px;
+    }
+    .stopBtn{
+        width:40px;
+        height:40px;
+        background:url(images/7.jpg);
+        background-position:-110px 0px;
+        margin-top:0px;
+        margin-left:850px;
+    }
+    .process{
+        width:100px;
+        height:100px;
+        margin-top:100px;
+        margin-left:100px;
+        position:relative;
+    }
+    .processimg1{
+        width:200px;
+        height:40px;
+        background:url(images/7.jpg);
+        background-position:0px 40px;
+        margin-top:100px;
+        margin-left:1000px;
+        position:relative;
+    }
+    .processimg2{
+        width:18px;
+        height:18px;
+        position:absolute;
+        background:url(images/7.jpg);
+        background-position:0px 0px;
+        margin-left:25px;
+        margin-top:10px;
+    }
+    .processtext{
+        position:absolute;
+        left:50px;
+        top:7px;
+        font-size:18px;
+    }
+    #wp_mute{
+        background:url(images/7.jpg);
+        background-position:235px 175px;
+        width:28px;
+        height:20px;
+        position:absolute;
+        top:15px;
+        margin-left:1270px;
+    }
+    #line1{
+            width: 320px;
+            height: 5px;
+            background-color: rgb(165, 163, 163);
+            border-radius: 5px;
+            margin-left:900px;
+            margin-top:-20px;
+            position:relative;    
+        }
+        #btn{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: orange;
+            margin-left:0px; 
+            margin-top:-2px; 
+            position:absolute;
+        }
+    #line2{
+            width: 320px;
+            height: 5px;
+            background-color: rgb(165, 163, 163);
+            border-radius: 5px;
+            margin-top:-20px;
+            position:relative; 
+    }
+    .time{
+        width:50px;
+        height:50px;
+        margin-left:1230px;
+        margin-top:-5px;
+        position:absolute;
+    }
+    .pro_comment{
+        width:500px;
+        height:200px;
+        position:relative;
+        left:850px;
+        top:20px;
+    }
+    .cir_comment{
+        width:50px;
+        height:50px;
+        border-radius:50%;
+        background:url(images/郭子仪.jpg) no-repeat;
+        background-size: contain;
+    }
+    .pro_background{
+        width:300px;
+        height:80px;
+        background:url(images/10.jpg) no-repeat;
+        background-size:contain;
+        position:absolute;
+        left:60px;
+        top:0;
+    }
+    .cir_text1{
+        width:150px;
+        height:20px;
+        color:rgb(165, 163, 163);
+        position:absolute;
+        left:90px;
+        top:5px;
+    }
+    .cir_gif{
+        width:15px;
+        height:15px;
+        background:url(images/gif.gif) no-repeat;
+        background-size:contain;
+        position:absolute;
+        left:90px;
+        top:43px;
+    }
+    .cir_text2{
+        width:130px;
+        height:20px;
+        position:absolute;
+        left:110px;
+        top:40px;
+    }
+    .cir_text3{
+        width:70px;
+        height:20px;
+        color:purple;
+        position:absolute;
+        left:290px;
+        top:25px;
+    }
+    .comment1{
+        width:1200px;
+        height:400px;
+        position:relative;
+        margin:0 auto;
+        top:400px;
+    }
+    .com_title1{
+        width:1200px;
+        height:60px;  
+        border-bottom:1px solid rgb(165, 163, 163);
+    }
+    .big{
+        font-size:20px;
+    }
+    .com_img{
+        width:70px;
+        height:70px;
+        background:url(images/郭子仪.jpg) no-repeat;
+        background-size:contain;
+        position:absolute;
+        top:80px;
+    }
+    .com_comment{
+        width:1000px;
+        height:160px;
+        border:1px solid rgb(165, 163, 163);
+        position:absolute;
+        left:100px;
+        top:90px;
+    }
+    #com_input{
+        width: 990px;
+        height:60px;
+        border-style:none;
+        position:absolute;
+        left:105px;
+        top:95px;
+        font-size:15px;
+        color:rgb(165, 163, 163);
+    }
+    #com_input:focus{
+        outline:none;
+    }
+    .com_smile{
+        width:30px;
+        height:30px;
+        background:url(images/9.png) no-repeat;
+        background-size:contain;
+        position:absolute;
+        left:100px;
+        top:270px;
+    }
+    #com_text1{
+        width:80px;
+        height:30px;
+        position:absolute;
+        color:rgb(165, 163, 163);
+        left:930px;
+        top:270px;
+    }
+    /* .com-text2{
+        width:200px;
+        height:30px;
+        position:absolute;
+        color:rgb(165, 163, 163);
+        left:120px;
+        top:110px;
+        font-size:15px;
+    } */
+    #com_button{
+        width:90px;
+        height:30px;
+        background:orange;
+        color:white;
+        line-height:30px;
+        text-align:center;
+        position:absolute;
+        left:1010px;
+        top:260px;
+        border-radius: 5%;
+    }
+    #comment2{
+        width:1300px;
+        height:400px;
+        position:relative;
+        margin:0 auto;
+        top:400px;
+        overflow:auto;
+    }
+    .com_title2{
+        width:1200px;
+        height:60px;  
+        border-bottom:1px solid rgb(165, 163, 163);
+        font-size:20px;
+    }
+    /* .one{
+        width:1200px;
+        height:100px;  
+        border-bottom:1px dashed rgb(165, 163, 163);
+    }
+    .two{
+        width:1200px;
+        height:100px;  
+        border-bottom:1px dashed rgb(165, 163, 163);
+    }
+    .three{
+        width:1200px;
+        height:100px;  
+        border-bottom:1px dashed rgb(165, 163, 163);
+    } */
+    .one_img{
+        width:70px;
+        height:70px;
+        background:url(images/郭子仪.jpg) no-repeat;
+        background-size:contain;
+        position:absolute;
+        top:80px;
+    }
+    #newcomment{
+        width:1200px;
+        height:400px;  
+    }
+    .newdiv{
+        width:1200px;
+        height:100px;  
+        border-bottom:1px dashed rgb(165, 163, 163);
+        position:relative;
+        top:0;
+    }
+    .newimg{
+        width:70px;
+        height:70px;
+        background:url(images/郭子仪.jpg) no-repeat;
+        background-size:contain;
+        position:absolute;
+        top:10px;
+    }
+    .newtext1{
+        width:70px;
+        height:20px;
+        color:orange;
+        font-size:20px;
+        position:absolute;
+        left:90px;
+    }
+    .newtext2{
+        width:1000px;
+        height:50px;
+        position:absolute;
+        left:90px;
+        top:30px;
+    }
+    .newtext3{
+        width:40px;
+        height:20px;
+        position:absolute;
+        right:0px;
+        top:30px;
+    }
+    .newtext4{
+        width:300px;
+        height:20px;
+        position:absolute;
+        left:90px;
+        top:80px;
+    }
+    .newtext5{
+        width:80px;
+        height:20px;
+        position:absolute;
+        right:80px;
+        top:80px;
+    }
+    .newtext6{
+        width:40px;
+        height:20px;
+        position:absolute;
+        right:0px;
+        top:80px;
+    }
+    .newgood{
+        width:20px;
+        height:20px;
+        position:absolute;
+        background:url(images/8.jpg) no-repeat;
+        background-size:contain;
+        right:70px;
+        top:80px;
+    }
+   #paging{
+       width:500px;
+       height:100px;
+       position:relative;
+       top:500px;
+       bottom:0px;
+       margin:0 auto;
+       display:flex;
+       overflow:hidden;
+   }
+   .pag{
+       width:30px;
+       height:30px;
+       border-radius:50%;
+       background:rgb(228, 223, 223);
+       justify-content:space-around;
+       flex-grow:0;
+       flex-shrink:0;
+       margin-left:20px;
+   }
+   .pag a{
+       width:30px;
+       height:30px;
+       border-radius:50%;
+       font-size:15px;
+       text-decoration: none;
+       color:rgb(95, 93, 93);
+       position:absolute;
+       top:5px;
+
+   }
+   .pag a:hover{
+        color:white;
+   }
+   .pag:hover{
+       background:orange;
+   }
+   .white{
+       width:30px;
+       height:30px;
+       border-radius:50%;
+       background:white;
+       justify-content:space-around;
+       flex-grow:0;
+       flex-shrink:0;
+       margin-left:20px;
+   }
+</style>
+<body>
+    <div class="all">
+        <div class="banner">
+            <div class="box">
+                <img src="images/2.jpg">
+                <div>首页</div>
+                <div>榜单</div>
+                <div>歌手</div>
+                <div>下载酷我客户端</div>
+                <div class="background">&nbsp;&nbsp;&nbsp;&nbsp;美女秀</div>
+                <div class="background">&nbsp;&nbsp;&nbsp;&nbsp;酷我耳机</div>
+                <div class="background">&nbsp;&nbsp;&nbsp;&nbsp;VIP会员</div>
+                <div class="background">&nbsp;&nbsp;&nbsp;&nbsp;i听</div>
+                <div>更多服务</div>
+                <div>登录</div>
+                <div>^</div>
+                <img src="images/4.png">
+            </div>
+        </div>
+        <div class="music">
+            <div class="content">
+                <div class="tittle">
+                    喜羊羊
+                </div>
+                <div class="introduce1">
+                    专辑：<span class="text">儿歌大全</span>&nbsp;&nbsp;歌手：<span class="text">华语群星</span>&nbsp;&nbsp;分享&nbsp;&nbsp;<img src="images/6.jpg">&nbsp;&nbsp;<span class="text">评论</span>
+                </div>
+                <div class="introduce2">
+                    上传时间：2015-10-02 歌曲来源：网络
+                </div>
+                <div class="introduce3"></div>
+            </div>
+            <div class="lyric">
+                别看我只是一只羊</br>
+            </br>
+                绿草因为我变的更香</br>
+            </br>
+                天空因为我变的更蓝</br>
+            </br>
+                白云因为我变的柔软</br>
+            </br>
+                别看我只是一只羊</br>
+            </br>
+                羊儿的聪明难以想像</br>
+            </br>
+                <font color="orange">天再高心情一样奔放</br></font>
+            </br>
+                每天都追赶太阳</br>
+            </br>
+                有什么难题去牵绊我都不会去心伤</br>
+            </br>
+                有什么危险在我面前也不会去慌乱</br>
+            </br>
+                就算有狼群把我追捕也当做游戏一场</br>
+            </br>
+                在什么时间都爱开心笑容都会飞翔</br>
+            </br>
+                就算会摔倒站得起来永远不会沮丧</br>
+            </br>
+                在所有天气拥有叫人大笑的力量</br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;虽然我只是羊</br>
+            </br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;喜羊羊美羊羊</br>
+            </div>
+        </div>
+        <div id="rallback" class="img">
+            <div class="circleimg"><canvas id="circle" width="400px" height="400px"></canvas></div> 
+            <!-- <img src="images/5.jpg" class="musicimg">  -->
+        </div>
+        <div class="process">
+                <div class="player">
+                    <audio autoplay="autoplay" id="mymusic">
+                    <source src="images/music.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <!-- 时间 -->
+                <div class="time">
+                    <p id="Time">00.00</p>
+                </div>  
+                <!-- 播放图标 -->
+                <div id="wp_playBtn" class="stopBtn"></div>
+                <!-- 进度条 -->
+                <div id="line1">
+                    <div><p id="btn"></p></div>
+                    <div id="line2"></div>
+                </div>
+                <!-- 音量图标 -->
+                <div id="wp_mute">
+                </div>
+                <div class="processimg1">
+                    <div class="processimg2">
+                    </div>
+                    <span class="processtext">免费下载这首歌</span>
+                </div>
+                <div class="pro_comment">
+                    <div class="cir_comment"></div>
+                    <div class="pro_background"></div>
+                    <div class="cir_text1">郭子仪——H5班</div>
+                    <div class="cir_text2">喜羊羊与灰太狼</div>
+                    <div class="cir_text3">去现场></div>
+                    <div class="cir_gif"></div>
+                </div>
+        </div>
+        <div class="comment1">
+            <div class="com_title1">
+                <span class="big">评论&nbsp;&nbsp;</span>
+                <span>1703条评论</span>
+            </div>
+            <div class="com_img"></div>
+            <div class="com_comment"></div>
+            <input id="com_input" placeholder="分享你的音乐见解"/>
+            <div class="com_smile"></div>
+            <div id="com_text1">已输入0字</div>
+            <!-- <div class="com-text2">分享你的音乐见解</div> -->
+            <div id="com_button">评论</div>
+        </div>
+        <div id="comment2">
+            <div class="com_title2">
+                精彩评论
+            </div>
+            <div id="newcomment">
+                <!-- <div class="newdiv">
+                    <div class="newimg"></div>
+                    <div class="newtext1">郭子仪</div>
+                    <div class="newtext2">Too</div>
+                    <div class="newtext3">分享</div>
+                    <div class="newtext4">2021-06-09 07:00:42</div>
+                    <div class="newtext5">删除 163</div>
+                    <div class="newtext6">回复</div>
+                    <div class="newgood"></div>  
+                </div> -->
+            </div>
+        </div>
+        <div id="paging"> 
+            <div class="pag"><a href="#">&nbsp;<</a></div>
+            <div class="pag"><a href="#">&nbsp;&nbsp;1</a></div>
+            <div class="pag"><a href="#">&nbsp;&nbsp;2</a></div>
+            <div class="pag"><a href="#">&nbsp;&nbsp;3</a></div>
+            <div class="pag white"><a href="#">&nbsp;&nbsp;...</a></div>
+            <div class="pag"><a href="#">&nbsp;17</a></div>
+            <div class="pag"><a href="#">&nbsp;&nbsp;></a></div>
+    </div>
+    </div>
+</body>
+<script>
+    var c=document.getElementById("circle");
+    var context=c.getContext("2d");
+    //大圆形
+    context.arc(200,200,180,0,2*Math.PI);
+    context.strokeStyle="rgb(165, 163, 163)";
+    context.stroke();
+    //小圆形
+    context.beginPath();
+    context.arc(200,190,30,0,2*Math.PI);
+    context.strokeStyle="rgb(165, 163, 163)";
+    context.fillStyle="rgba(255, 255, 255,0.6)";
+    context.fill();
+    context.stroke();
+    //小白点
+    context.beginPath();
+    context.strokeStyle="rgb(165, 163, 163)";
+    context.arc(200,190,10,0,2*Math.PI);
+    context.fillStyle="white";
+    context.fill();
+    context.stroke();
+    //旋转
+    var rallback=document.getElementById("rallback");
+    //播放图标
+    var wp_playBtn=document.getElementById("wp_playBtn");
+    //音乐节点
+    var mymusic=document.getElementById("mymusic");
+    //进度条
+    var line1=document.getElementById("line1");
+    var line2=document.getElementById("line2");
+    //时间
+    var Time=document.getElementById("Time");
+    //声音
+    var wp_mute=document.getElementById("wp_mute");
+        //实现静音
+        wp_mute.onclick=function(){
+          if(mymusic.muted==true){
+            mymusic.muted=false;
+          }
+          else{
+            mymusic.muted=true;
+          }
+        }
+        //实现播放条和时间
+        var minutes,seconds;
+        function getprocess(){
+          setInterval(function() {
+            width=Math.round(mymusic.currentTime)/Math.round(mymusic.duration)*320;
+            btn.style.left=width+"px";
+            //时间转化格式
+            minutes=parseInt(mymusic.currentTime%3600/60);
+            seconds=parseInt(mymusic.currentTime%3600%60);
+            minutes=minutes<10 ? "0"+minutes : minutes;
+            seconds=seconds<10 ? "0"+seconds : seconds;
+            Time.innerHTML=minutes+":"+seconds;
+            line2.style.width=width+"px";
+            line2.style.backgroundColor="orange";
+          },500);
+        }
+        function processStop() {
+          if(minutes==parseInt(mymusic.duration%3600/60)){
+            clearInterval(getprocess());
+          }
+        }
+        getprocess();
+        processStop();   
+    //实现播放和暂停
+    function togther(){
+        if(mymusic.paused){
+            rallback.style.webkitAnimationPlayState = "paused"; 
+            wp_playBtn.className="stopBtn"; 
+        }
+        else{
+            rallback.style.webkitAnimationPlayState = "running"; 
+            wp_playBtn.className="playBtn";
+        }
+    }
+    togther();
+    wp_playBtn.onclick=function() {
+      if(mymusic.paused){
+        mymusic.play();
+        wp_playBtn.className="playBtn";
+        rallback.style.webkitAnimationPlayState = "running"; 
+      }
+      else{
+        mymusic.pause();
+        wp_playBtn.className="stopBtn";  
+        rallback.style.webkitAnimationPlayState = "paused"; 
+      }     
+    } 
+    var loc=new Array();
+    var localList=localStorage.getItem('comment');
+    
+    //评论区
+    var comment=document.getElementById("com_input");
+    var comtext=document.getElementById("com_text1");
+    //按钮
+    var button=document.getElementById("com_button");
+    //获取节点
+    var newcomment=document.getElementById("newcomment");
+    //获取当前时间
+	function gettime(){
+    var now=new Date();
+    var year=now.getFullYear();
+    var month=now.getMonth()+1;
+    var day=now.getDate();
+    var hour=now.getHours();
+    var minute =now.getMinutes();
+    var second =now.getSeconds();
+    var time=year+"-"+month+"-"+day+" "+hour+":"+minute+":"+second;
+      return time;
+	}
+    //本地存储
+    function joinComment(){
+        if(localStorage.getItem('comment')){
+        loc=JSON.parse(localStorage.getItem('comment'))
+    }
+    loc.push({
+        "time":gettime(),
+        "comment":comment.value,
+    });
+    localStorage.setItem('comment',JSON.stringify(loc));
+    }
+    //聚焦事件
+    comment.onmouseover=function(){
+        comtext.innerHTML="已输入"+(comment.value).length+"字";
+    }
+    //存储事件
+    function getdata(){
+            joinComment();
+            var newdiv=document.createElement("div");
+            newdiv.setAttribute("class","newdiv");
+            var newimg=document.createElement("div");
+            newimg.setAttribute("class","newimg");
+            var newtext1=document.createElement("div");
+            newtext1.setAttribute("class","newtext1");
+            var newtext2=document.createElement("div");
+            newtext2.setAttribute("class","newtext2");
+            var newtext3=document.createElement("div");
+            newtext3.setAttribute("class","newtext3");
+            var newtext4=document.createElement("div");
+            newtext4.setAttribute("class","newtext4");
+            var newtext5=document.createElement("div");
+            newtext5.setAttribute("class","newtext5");
+            var newtext6=document.createElement("div");
+            newtext6.setAttribute("class","newtext6");
+            var newgood=document.createElement("div");
+            newgood.setAttribute("class","newgood");
+            newtext1.innerHTML="郭子仪";
+            newtext3.innerHTML="分享";
+            newtext5.innerHTML="删除 163";
+            newtext6.innerHTML="回复";
+        var arr=[];
+        var loc_arr=localStorage.getItem('comment');
+        arr=JSON.parse(loc_arr);
+        for(var i=0;i<arr.length;i++){
+            newtext4.innerHTML=arr[i].time;
+            newtext2.innerHTML=arr[i].comment;
+        }
+            newcomment.appendChild(newdiv);
+            newdiv.appendChild(newimg);
+            newdiv.appendChild(newtext1);
+            newdiv.appendChild(newtext2);
+            newdiv.appendChild(newtext3);
+            newdiv.appendChild(newtext4);
+            newdiv.appendChild(newtext5);
+            newdiv.appendChild(newtext6);
+            newdiv.appendChild(newgood);
+            comment.value="";
+    }
+    //点击事件
+    button.onclick=function(){
+            getdata();
+    }
+//    if(localList){
+//         getdata();
+//     }
+</script>
+</html>
